@@ -1,53 +1,57 @@
-# Housing Price Prediction using SVM (Support Vector Machine)
+# Student Study Hours Prediction using SVM
 
-This project predicts housing prices using a machine learning model called **Support Vector Regression (SVR)**. The code is written in Python using an object-oriented programming (OOP) approach to help beginners understand and structure real-world projects.
+## 📄 Project Description
 
----
-
-## 📌 Project Steps
-
-### 1. Data Collection
-
-- The dataset is loaded from a CSV file.
-- The file used is typically from Kaggle, such as: [Housing Prices Dataset](https://www.kaggle.com/datasets/yasserh/housing-prices-dataset)
-
-### 2. Data Processing
-
-- **Univariate Analysis:** Describes each feature individually (e.g., mean, median, histograms).
-- **Bivariate Analysis:** Shows relationships between features using a heatmap (correlation matrix).
-
-### 3. Data Splitting
-
-- The dataset is split into **training** and **testing** sets using `train_test_split` from scikit-learn.
-
-### 4. Model Training
-
-- An SVM model is trained using `SVR` (Support Vector Regression).
-- Features are scaled using `StandardScaler`.
-- The model is created as a pipeline to automate preprocessing and prediction.
-
-### 5. Model Saving
-
-- The trained model is saved using Python’s `pickle` module.
-- This allows the model to be reused without retraining.
+This project applies machine learning to predict student scores based on the number of study hours. We use **Support Vector Regression (SVR)** to create a predictive model. The project is structured in a beginner-friendly, object-oriented way.
 
 ---
 
-## 🛠️ Tech Stack
+## 📊 Dataset Information
 
-- Python 3.x
-- pandas
-- seaborn
-- matplotlib
-- scikit-learn
-- pickle
+* **Source** : [Kaggle - Student Study Hours](https://www.kaggle.com/datasets/himanshunakrani/student-study-hours)
+* **File Name** : `student_scores.csv`
+* **Features** :
+* `Hours` – number of hours studied
+* `Scores` – marks obtained
 
 ---
 
-## 📂 How to Run the Project
+## 🧭 Project Workflow
 
-1. **Install required libraries:**
+### Step 1: Data Collection and Understanding
 
-   ```bash
-   pip install pandas seaborn matplotlib scikit-learn
-   ```
+* Load the dataset using `pandas`
+* Display the first few rows
+* Check data types and missing values
+
+### Step 2: Data Preprocessing and Analysis
+
+* **Univariate Analysis** : Histogram plots to observe the distribution
+* **Bivariate Analysis** : Correlation matrix and heatmap to check relationships
+
+### Step 3: Data Splitting
+
+* Use `train_test_split` to divide the dataset into training and testing sets
+
+### Step 4: Model Training
+
+* Create a pipeline with `StandardScaler` and `SVR`
+* Train the model using the training set
+
+### Step 5: Model Saving
+
+* Save the trained model using Python’s `pickle` module
+* The model is stored as `svm_study_model.pkl`
+
+## 🗂️ Files in the Project
+
+* `student_scores.csv` – Dataset
+* `study_score_predictor.py` – Main script
+* `svm_study_model.pkl` – Trained model
+* `README.md` – Project explanation
+
+---
+
+## ✅ Summary
+
+This project provides a simple but complete machine learning pipeline for regression tasks. It is ideal for beginners who want to understand how to load data, visualize it, train a model, and save it for future use.
